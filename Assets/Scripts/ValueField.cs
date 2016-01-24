@@ -1,10 +1,7 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine.UI;
 
-[RequireComponent(typeof(Text))]
-public class ValueField : MonoBehaviour
+public class ValueField : UnityEngine.MonoBehaviour
 {
-    public int Value;
     Text _text;
 
     void Start()
@@ -14,7 +11,6 @@ public class ValueField : MonoBehaviour
 
     public void SetValue(float newVal)
     {
-        Value = (int)newVal;
-        _text.text = Value.ToString();
+        _text.text = ((int)newVal).ToString();
     }
 }
